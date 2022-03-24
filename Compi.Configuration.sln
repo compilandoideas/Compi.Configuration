@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C2F4D5EC-7ECC-46DD-B9A6-765CEA574A1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{AF5B82CB-EF80-4506-8B8A-F750F948594C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compi.Configuration.Console", "src\Compi.Configuration.Console\Compi.Configuration.Console.csproj", "{778BF250-5F71-4C87-8FDD-4ABD9A0B5527}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{8D7E4665-65DA-4537-9952-B30EF007BEF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{4F9C6BF6-628D-4BA8-A9BE-5EA53C3F205E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{778BF250-5F71-4C87-8FDD-4ABD9A0B5527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{778BF250-5F71-4C87-8FDD-4ABD9A0B5527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{778BF250-5F71-4C87-8FDD-4ABD9A0B5527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{778BF250-5F71-4C87-8FDD-4ABD9A0B5527}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AF5B82CB-EF80-4506-8B8A-F750F948594C} = {C2F4D5EC-7ECC-46DD-B9A6-765CEA574A1E}
+		{778BF250-5F71-4C87-8FDD-4ABD9A0B5527} = {AF5B82CB-EF80-4506-8B8A-F750F948594C}
+		{8D7E4665-65DA-4537-9952-B30EF007BEF2} = {C2F4D5EC-7ECC-46DD-B9A6-765CEA574A1E}
+		{4F9C6BF6-628D-4BA8-A9BE-5EA53C3F205E} = {C2F4D5EC-7ECC-46DD-B9A6-765CEA574A1E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {290C4B91-DF44-4611-B572-64AADB92D99D}
+	EndGlobalSection
+EndGlobal
