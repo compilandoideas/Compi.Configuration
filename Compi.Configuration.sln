@@ -5,9 +5,9 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C2F4D5EC-7ECC-46DD-B9A6-765CEA574A1E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{AF5B82CB-EF80-4506-8B8A-F750F948594C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleApp", "ConsoleApp", "{AF5B82CB-EF80-4506-8B8A-F750F948594C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compi.Configuration.Console", "src\Compi.Configuration.Console\Compi.Configuration.Console.csproj", "{778BF250-5F71-4C87-8FDD-4ABD9A0B5527}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compi.Configuration.ConsoleApp", "src\ConsoleApp\Compi.Configuration.ConsoleApp.csproj", "{778BF250-5F71-4C87-8FDD-4ABD9A0B5527}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{8D7E4665-65DA-4537-9952-B30EF007BEF2}"
 EndProject
