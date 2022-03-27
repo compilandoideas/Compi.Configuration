@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{4F9C6BF6-628
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1B269E3C-1DF8-4BCC-8262-1A23E1006C4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compi.Configuration.Service", "src\Service\Compi.Configuration.Service\Compi.Configuration.Service.csproj", "{3C2C5200-A53A-4D80-8898-7FA9B4F59DA1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compi.Configuration.Service", "src\Service\Compi.Configuration.Service.csproj", "{3C2C5200-A53A-4D80-8898-7FA9B4F59DA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
