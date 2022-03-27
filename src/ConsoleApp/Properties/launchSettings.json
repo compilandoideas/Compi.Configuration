@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Compi.Configuration.ConsoleApp": {
+      "commandName": "Project",
+      "commandLineArgs": "var1"
+    }
+  }
+}
