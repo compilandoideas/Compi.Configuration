@@ -1,3 +1,4 @@
+using Compi.Configuration.Service.Presentation.Configuration.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -44,7 +45,8 @@ namespace Compi.Configuration.Service
                 //var emailSettings = hostContext.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
                 //var connectionString = hostContext.Configuration["ConnectionStrings:ConnectionString"];
 
-                //services.AddEmailService(emailSettings);
+                services.AddPresentation();
+                services.AddMediator();
 
             })
             .UseWindowsService();

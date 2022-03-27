@@ -12,6 +12,8 @@
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.0" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +21,5 @@
     <Folder Include="Core\Domain\" />
     <Folder Include="Infrastructure\Repositories\" />
     <Folder Include="Infrastructure\Services\EmailService\" />
-    <Folder Include="Presentation\Configuration\Extensions\" />
   </ItemGroup>
 </Project>

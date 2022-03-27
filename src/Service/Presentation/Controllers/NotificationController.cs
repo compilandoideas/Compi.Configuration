@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Compi.Configuration.Service.Presentation.Controllers
 {
-    public class NotificationController
+    public class NotificationController : BaseController
     {
 
         private readonly IMediator _mediator;
