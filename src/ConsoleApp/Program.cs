@@ -44,7 +44,7 @@ namespace Compi.Configuration.ConsoleApp
 
 
 
-            Settings settings = new Settings()
+            Settings settings = new ()
             {
                 Var1 = "default value"
             };
@@ -56,14 +56,18 @@ namespace Compi.Configuration.ConsoleApp
 
 
 
+
             Console.WriteLine($"var1: {var1}");
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("#################################");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.ReadLine();
-            //  configurationBuilder.Sources.Clear();
-            //  configurationBuilder
+            
+
+
+            // Console.ReadLine();
+            // configurationBuilder.Sources.Clear();
+            // configurationBuilder
             //.SetBasePath(Path.Combine(Directory.GetCurrentDirectory()))
             //.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
             //.AddJsonFile($"appsettings.{environmentName}.json", optional: true)

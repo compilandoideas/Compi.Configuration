@@ -32,7 +32,7 @@ namespace Compi.Configuration.Service
                 //.SetBasePath(Path.Combine(Directory.GetCurrentDirectory()))
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{environmentName}.json", optional: true)
-                .AddEnvironmentVariables(prefix: "Algo_")
+                .AddEnvironmentVariables(prefix: "Config_")
                 .AddCommandLine(args)
                 .Build();
 
@@ -42,10 +42,10 @@ namespace Compi.Configuration.Service
             {
                 services.AddHostedService<Worker>();
 
-                //var emailSettings = hostContext.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
+               // var emailSettings = hostContext.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
                 //var connectionString = hostContext.Configuration["ConnectionStrings:ConnectionString"];
 
-                services.AddPresentation();
+              
                 services.AddMediator();
 
             })
