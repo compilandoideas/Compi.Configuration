@@ -14,18 +14,6 @@ namespace Compi.Configuration.ConsoleApp
             ConfigurationWithConfigurationApi(args);
 
 
-            // Console.ReadLine();
-            // configurationBuilder.Sources.Clear();
-            // configurationBuilder
-            //.SetBasePath(Path.Combine(Directory.GetCurrentDirectory()))
-            //.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-            //.AddJsonFile($"appsettings.{environmentName}.json", optional: true)
-            //.AddEnvironmentVariables(prefix: "Algo_")
-            //.AddCommandLine(args)
-            //.Build();
-
-
-
         }
 
         private static void ConfigurationWithConfigurationApi(string[] args)
@@ -77,6 +65,18 @@ namespace Compi.Configuration.ConsoleApp
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("#################################");
             Console.ForegroundColor = ConsoleColor.White;
+
+
+
+            // Console.ReadLine();
+            // configurationBuilder.Sources.Clear();
+            // configurationBuilder
+            //.SetBasePath(Path.Combine(Directory.GetCurrentDirectory()))
+            //.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            //.AddJsonFile($"appsettings.{environmentName}.json", optional: true)
+            //.AddEnvironmentVariables(prefix: "Algo_")
+            //.AddCommandLine(args)
+            //.Build();
         }
 
 

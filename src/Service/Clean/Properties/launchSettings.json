@@ -1,11 +1,12 @@
-﻿{
+{
   "profiles": {
     "Compi.Configuration.Service": {
       "commandName": "Project",
-      "dotnetRunMessages": "true",
+      "commandLineArgs": "--var=fromCommandLine",
       "environmentVariables": {
         "DOTNET_ENVIRONMENT": "Development"
-      }
+      },
+      "dotnetRunMessages": "true"
     }
   }
 }

@@ -1,4 +1,5 @@
-using Compi.Configuration.Service.Presentation.Configuration.Extensions;
+using Compi.Configuration.Clean.Service.Extensions;
+using Compi.Configuration.Clean.Service.HostedServices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -8,7 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Compi.Configuration.Service
+namespace Compi.Configuration.Clean.Service
 {
     public class Program
     {
@@ -23,7 +24,7 @@ namespace Compi.Configuration.Service
             {
 
                 hostContext.HostingEnvironment.ApplicationName = "Service Example";
-              
+
                 configurationBuilder.Sources.Clear();
 
                 var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
@@ -42,10 +43,10 @@ namespace Compi.Configuration.Service
             {
                 services.AddHostedService<Worker>();
 
-               // var emailSettings = hostContext.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
+                // var emailSettings = hostContext.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
                 //var connectionString = hostContext.Configuration["ConnectionStrings:ConnectionString"];
 
-              
+
                 services.AddMediator();
 
             })

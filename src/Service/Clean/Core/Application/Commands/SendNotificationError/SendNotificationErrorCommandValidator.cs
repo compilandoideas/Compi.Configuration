@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Compi.Configuration.Service.Core.Application.Commands.SendNotificationError
+namespace Compi.Configuration.Clean.Service.Core.Application.Commands.SendNotificationError
 {
     public class SendNotificationErrorCommandValidator : AbstractValidator<SendNotificationErrorCommand>
     {

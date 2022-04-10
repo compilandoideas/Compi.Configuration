@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Compi.Configuration.Service.Common
+namespace Compi.Configuration.Clean.Service.Common
 {
     public sealed class ConnectionString
     {

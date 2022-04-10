@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Compi.Configuration.Service.Common
+namespace Compi.Configuration.Clean.Service.Common
 {
     public class Result
     {
@@ -35,7 +35,7 @@ namespace Compi.Configuration.Service.Common
 
         public static Result<T> Failure<T>(string message)
         {
-            return new Result<T>(default(T), false, message);
+            return new Result<T>(default, false, message);
         }
 
         public static Result Success()
