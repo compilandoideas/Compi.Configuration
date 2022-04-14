@@ -20,15 +20,17 @@ namespace Compi.Configuration.Clean.Service.HostedServices
         private readonly IConfiguration _configuration;
         private readonly IServiceProvider _services;
 
-        public Worker(ILogger<Worker> logger, IMediator mediator, IConfiguration configuration, IServiceProvider services)
+        public Worker(ILogger<Worker> logger, IConfiguration configuration, IServiceProvider services)
         {
-            _logger = logger;
 
-            _mediator = mediator ??
-                throw new ArgumentNullException(nameof(mediator));
+            _logger = logger  ??
+               throw new ArgumentNullException(nameof(logger));
 
-            _configuration = configuration;
-            _services = services;
+            _configuration = configuration ??
+               throw new ArgumentNullException(nameof(configuration));
+
+            _services = services ??
+               throw new ArgumentNullException(nameof(services));
 
         }
 
@@ -48,12 +50,10 @@ namespace Compi.Configuration.Clean.Service.HostedServices
 
 
                 using var scope = _services.CreateScope();
-                var m = scope.ServiceProvider.GetRequiredService<IMediator>();
+                var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
 
-                Result result = await m.Send(new SendNotificationErrorCommand(to, subject, from, date));
-
-                // Result result = await _mediator.Send(new SendNotificationErrorCommand(to, subject, from, date));
-
+                Result result = await mediator.Send(new SendNotificationErrorCommand(to, subject, from, date), stoppingToken);
+             
 
             }
         }

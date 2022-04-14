@@ -16,7 +16,7 @@ namespace Compi.Configuration.Clean.Service.Core.Application.Commands.SendNotifi
         public string Subject { get; set; }
         public string From { get; set; }
         public string Date { get; set; }
-
+   
 
         public SendNotificationErrorCommand(string to, string subject, string from, string date)
         {
@@ -24,6 +24,7 @@ namespace Compi.Configuration.Clean.Service.Core.Application.Commands.SendNotifi
             Subject = subject;
             From = from;
             Date = date;
+           
 
         }
 

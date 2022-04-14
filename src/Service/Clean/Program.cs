@@ -3,19 +3,44 @@ using Compi.Configuration.Clean.Service.HostedServices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Serilog;
+using Serilog.Events;
+using Serilog.Sinks.Email;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+
 
 namespace Compi.Configuration.Clean.Service
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static int Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            Log.Logger = new LoggerConfiguration()
+                .Enrich.FromLogContext()
+                .WriteTo.Console()
+                .CreateBootstrapLogger();
+
+            try
+            {
+                Log.Information("Getting the motors running...");
+                CreateHostBuilder(args).Build().Run();
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                Log.Fatal(ex, "Host terminated unexpectedly");
+                return 1;
+            }
+            finally
+            {
+                Log.CloseAndFlush();
+            }
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -38,6 +63,9 @@ namespace Compi.Configuration.Clean.Service
                 .Build();
 
 
+
+
+
             })
             .ConfigureServices((hostContext, services) =>
             {
@@ -49,6 +77,14 @@ namespace Compi.Configuration.Clean.Service
 
                 services.AddMediator();
 
+            })
+            .UseSerilog((context, services, loggerConfiguration) =>
+            {
+
+                //Serilog.Debugging.SelfLog.Enable(Console.Error);
+
+                loggerConfiguration
+                .ReadFrom.Configuration(context.Configuration);
             })
             .UseWindowsService();
     }
